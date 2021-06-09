@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>
+            random game
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+    <body>
+        <div style="width:100%; height:100%; background-image: url(imgg.webp); background-repeat: no-repeat; background-size:cover;">
+            
+                <div class="bg-success"style="width:100%; height:10%;  display:flex; justify-content: space-between;">
+                    <h3 class="text-light" style="margin-left:5%; margin-top:2%;">Name:A Aayush</h3>
+                    <h3 class="text-light" style=" margin-right:2%; margin-top:2%;">Reg No:20BCE10749</h3>
+        
+                </div>
+                <div class="bg-dark"style="width:30%; height:30%; margin-left:35%; margin-top:10%; opacity:0.9" >
+                    <form>
+                        <h4 class="text-center text-light">Guess the Number Game</h4>
+                    <input
+                    type="text"
+                    placeholder="guess any number"
+                    name="guess"
+                    id = "guessField"
+                    
+                    
+                    style="margin-left:70px; width:60%; margin-top:50px;">
+                    <br>
+                    <Button class="btn-outline-info" value = "Submit guess" id = "submitguess" style="margin-left: 30%; width: 30%; margin-top: 25px; border-radius: 20px;">submit</Button>
+                    
+
+                    </form>
+                    
+                </div>
+                <div style="width:100%; height:7%; margin-bottom: 0ch; background-color: black; margin-top:17%;" class="text-light text-center">
+
+                    <h4>GUESS ANY NUMBER BETWEEN 1-50</h4>
+    
+                </div>
+
+        </div>
+        <script type = "text/javascript">
+  
+            // random value generated
+            var y = Math.floor(Math.random() * 50+1);
+              
+            // counting the number of guesses
+            // made for correct Guess
+            var guess = 1;
+              
+            document.getElementById("submitguess").onclick = function(){
+              
+           // number guessed by user     
+           var x = document.getElementById("guessField").value;
+          
+           if(x == y)
+           {    
+               alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+                       + guess + " GUESS ");
+           }
+           else if(x > y) /* if guessed number is greater
+                           than actual number*/ 
+           {    
+               guess++;
+               alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+           }
+           else
+           {
+               guess++;
+               alert("OOPS SORRY!! TRY A GREATER NUMBER")
+           }
+        }
+        </script>
+    </body>
+</html>
